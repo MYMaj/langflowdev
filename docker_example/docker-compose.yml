@@ -29,9 +29,9 @@ services:
       - langflow-postgres:/var/lib/postgresql/data
 
 networks:
-  brigde2dev:
-    ipam:
-      driver: default
+  ingress:
+    name: existing_docker_network
+    external: true
       config:
         - subnet:"192.168.90.0/24" 
     
